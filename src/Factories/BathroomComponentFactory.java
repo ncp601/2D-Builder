@@ -42,6 +42,14 @@ public class BathroomComponentFactory extends AbstractFloorComponentFactory{
 			return new BathroomSinkComponentFacingLeft(true);
 		}
 		
+		else if(componentType.equals("BATHTUBH")){
+			return new BathtubComponentHorizontal(true);
+		}
+		
+		else if(componentType.equals("BATHTUBV")){
+			return new BathtubComponentVertical(true);
+		}
+		
 		else
 			return null;
 	}
@@ -82,6 +90,14 @@ public class BathroomComponentFactory extends AbstractFloorComponentFactory{
 		
 		else if(componentType.equals("SINKFL")){
 			return new BathroomSinkComponentFacingLeft(false);
+		}
+		
+		else if(componentType.equals("BATHTUBH")){
+			return new BathtubComponentHorizontal(false);
+		}
+		
+		else if(componentType.equals("BATHTUBV")){
+			return new BathtubComponentVertical(false);
 		}
 		
 		else

@@ -27,19 +27,19 @@ public class BedroomComponentFactory extends AbstractFloorComponentFactory{
 		}
 		
 		else if(componentType.equals("SINGLEBEDFD")){
-			return new SingleBedComponentFacingDown(false);
+			return new SingleBedComponentFacingDown(true);
 		}
 		
 		else if(componentType.equals("SINGLEBEDFU")){
-			return new SingleBedComponentFacingUp(false);
+			return new SingleBedComponentFacingUp(true);
 		}
 		
 		else if(componentType.equals("SINGLEBEDFR")){
-			return new SingleBedComponentFacingRight(false);
+			return new SingleBedComponentFacingRight(true);
 		}
 		
 		else if(componentType.equals("SINGLEBEDFL")){
-			return new SingleBedComponentFacingLeft(false);
+			return new SingleBedComponentFacingLeft(true);
 		}
 		
 		else if(componentType.equals("BEDTABLE1")){

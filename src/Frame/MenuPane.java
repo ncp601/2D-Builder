@@ -343,7 +343,7 @@ public class MenuPane extends JPanel{
         add(mainMenuPanel, "MAIN");
 
         //GridLayout for the component panels
-        GridLayout g = new GridLayout(5, 2);
+        GridLayout g = new GridLayout(6, 2);
         g.setHgap(0);
         g.setVgap(0);
         
@@ -590,6 +590,8 @@ public class MenuPane extends JPanel{
         bathroomMenuPanel.add(bathroomFactory.getComponent("SINKFU")); 
         bathroomMenuPanel.add(bathroomFactory.getComponent("SINKFR")); 
         bathroomMenuPanel.add(bathroomFactory.getComponent("SINKFL")); 
+        bathroomMenuPanel.add(bathroomFactory.getComponent("BATHTUBH")); 
+        bathroomMenuPanel.add(bathroomFactory.getComponent("BATHTUBV")); 
           
         add(bathroomMenuPanel, "BATHROOM");
 
