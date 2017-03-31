@@ -604,6 +604,15 @@ public class MenuPane extends JPanel{
               }
           });
           
+        laundryMenuPanel.add(laundryFactory.getComponent("WASHERFD"));
+        laundryMenuPanel.add(laundryFactory.getComponent("WASHERFU"));
+        laundryMenuPanel.add(laundryFactory.getComponent("WASHERFR"));
+        laundryMenuPanel.add(laundryFactory.getComponent("WASHERFL"));
+        laundryMenuPanel.add(laundryFactory.getComponent("DRYERFD"));
+        laundryMenuPanel.add(laundryFactory.getComponent("DRYERFU"));
+        laundryMenuPanel.add(laundryFactory.getComponent("DRYERFR"));
+        laundryMenuPanel.add(laundryFactory.getComponent("DRYERFL"));
+  
         add(laundryMenuPanel, "LAUNDRY");
 
       //Creates the garageMenuPanel that will hold garage components
