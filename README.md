@@ -20,5 +20,6 @@ An application that allows the user to design a floor plan by dragging and dropp
 ## Authors
 
 Nick Pike
+
 Ryan Lau
 
