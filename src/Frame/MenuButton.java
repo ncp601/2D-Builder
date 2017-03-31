@@ -6,6 +6,10 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 
+/**
+ * - Class that creates the buttons for the various named categories on the
+ *   MenuPane main menu.
+ */
 public class MenuButton extends JButton{
 
 	/**

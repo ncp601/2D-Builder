@@ -27,6 +27,22 @@ public class StairsComponentFactory extends AbstractFloorComponentFactory{
 				return new StairsStraightFacingLeft(true);
 			}
 			
+			else if(componentType.equals("STAIRTSU")){
+				return new StairsUFacingUp(true);
+			}
+			
+			else if(componentType.equals("STAIRTSD")){
+				return new StairsUFacingDown(true);
+			}
+			
+			else if(componentType.equals("STAIRTSR")){
+				return new StairsUFacingRight(true);
+			}
+			
+			else if(componentType.equals("STAIRTSL")){
+				return new StairsUFacingLeft(true);
+			}
+			
 			else
 				return null;
 		}
@@ -51,6 +67,22 @@ public class StairsComponentFactory extends AbstractFloorComponentFactory{
 			
 			else if(componentType.equals("STAIRSSL")){
 				return new StairsStraightFacingLeft(false);
+			}
+			
+			else if(componentType.equals("STAIRTSU")){
+				return new StairsUFacingUp(false);
+			}
+			
+			else if(componentType.equals("STAIRTSD")){
+				return new StairsUFacingDown(false);
+			}
+			
+			else if(componentType.equals("STAIRTSR")){
+				return new StairsUFacingRight(false);
+			}
+			
+			else if(componentType.equals("STAIRTSL")){
+				return new StairsUFacingLeft(false);
 			}
 			
 			else

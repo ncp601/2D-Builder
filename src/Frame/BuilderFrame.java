@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
- * Creates the overall frame and hold the root and content panes
+ * - Creates the overall frame and hold the root and content panes
  */
 public class BuilderFrame extends JFrame {
 

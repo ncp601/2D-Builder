@@ -13,8 +13,10 @@ import Factories.*;
 import FloorComponent.*;
 
 /**
- * Class that creates everything in the left tabbed panel. 
- * 
+ * - Class that creates the TabbedPane seen in the application. This class also creates 
+ *   the instances of MainLayeredPane for each tab(floor level). 
+ * - This class manages all the state changes and actions performed on the TabbedPane.
+ * - This class also implements the floorsToString() and stringToFloorComponents() methods 
  */
 public class TabbedPane implements ChangeListener{
 
@@ -53,7 +55,7 @@ public class TabbedPane implements ChangeListener{
     
     private InnerPanel innerPanel;
     
-    //Regular expressions used to parse various strings
+    //Regular expressions used to parse the various strings
     String addFloorPattern = "(Wall)|(Elevator)|(Stairs)"; // (WALL([1-3]+([H|V])|(HALF)))|(ELEVATOR(DOWN|UP|RIGHT|LEFT))
     String initialCheckPattern = "^[$].*[$]$";
     
@@ -119,6 +121,7 @@ public class TabbedPane implements ChangeListener{
 	    } 
     }
 	
+	//Removes the current tab that the user is in 
 	public void removeCurrentFloor(){
 
         //if 1 tab + plus tab do nothing
@@ -145,6 +148,7 @@ public class TabbedPane implements ChangeListener{
         updateFloorNames();
     }
 	
+	//Updates the floor names on the tabs 
 	private void updateFloorNames(){
 		for(int i = 0; i< tabNumber; i++){
 			String title = "Floor " + (i+1);
@@ -195,9 +199,7 @@ public class TabbedPane implements ChangeListener{
 		previousTab.revalidate();
 	}
 	
-	/*
-	 * 
-	 */
+	// Converts the loaded string to visible components and floors in the application
 	public void stringToFloorComponents(){
 		innerPanel = InnerPanel.getInstance();
 		String loadComponents = innerPanel.getLoadedComponents();
@@ -323,9 +325,7 @@ public class TabbedPane implements ChangeListener{
 		}
 	}
 	
-	/*
-	 * 
-	 */
+	//Converts the current floors and components into a delimited string
 	public String floorsToString(){
         innerPanel = InnerPanel.getInstance();
 
@@ -357,6 +357,7 @@ public class TabbedPane implements ChangeListener{
         return allComponents;
     }
 	
+	//Monitors the state change for the tabs in the tabbedpane
 	public void stateChanged(ChangeEvent event) {
 		innerPanel = InnerPanel.getInstance();
 		

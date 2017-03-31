@@ -9,10 +9,15 @@ import Factories.FloorComponentFactoryProducer;
 import FloorComponent.*;
 import Frame.*;
 
-public class ComponentMover extends MouseAdapter
-{
+/*
+ * - Class that manages all the mouse events for adding, moving and deleting components 
+ *   in the application.
+ */
+public class ComponentMover extends MouseAdapter {
 	private Insets dragInsets = new Insets(0, 0, 0, 0);
-	private Dimension snapSize = new Dimension(1, 1);
+	
+	//Change this to alter snap size on the grid
+	private Dimension snapSize = new Dimension(5, 5);
 	private boolean changeCursor = true;
 	private boolean autoLayout = false;
 
@@ -61,25 +66,17 @@ public class ComponentMover extends MouseAdapter
 	private boolean pressedOperation;
 	private boolean releasedOperaion;
 	private boolean releasedOperationInside;
-	
-    //private Dimension componentSize = new Dimension(110, 110);
     
 	private InnerPanel innerPanel;
 
 	/**
-	 *  Constructor for moving individual components. The components must be
-	 *  regisetered using the registerComponent() method.
+	 *  Constructor for moving individual components
 	 */
 	public ComponentMover(){	
 	}
 	
 	/**
-	 *  Setup the variables used to control the moving of the component:
-	 *
-	 *  source - the source component of the mouse event
-	 *  destination - the component that will ultimately be moved
-	 *  pressed - the Point where the mouse was pressed in the destination
-	 *      component coordinates.
+	 *  Setup for adding or moving a component
 	 */
 	@Override
 	public void mousePressed(MouseEvent e){
@@ -216,8 +213,7 @@ public class ComponentMover extends MouseAdapter
 	}
 
 	/**
-	 *  Move the component to its new location. The dragged Point must be in
-	 *  the destination coordinates.
+	 *  Move the component to its new location
 	 */
 	@Override
 	public void mouseDragged(MouseEvent e)
@@ -248,7 +244,8 @@ public class ComponentMover extends MouseAdapter
 	}
 
 	/**
-	 *  Restore the original state of the Component
+	 *  Adds the component to the glassPanel of the current tab if the component 
+	 *  is within the bounds 
 	 */
 	@Override
 	public void mouseReleased(MouseEvent e) {

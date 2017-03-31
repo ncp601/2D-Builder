@@ -8,6 +8,9 @@ import Frame.MainLayeredPane;
 
 import java.awt.*;
 
+/*
+ * - Class that implements the add, move, delete and clear operations
+ */
 public class ComponentReceiver {
 
 	private InnerPanel innerPanel;

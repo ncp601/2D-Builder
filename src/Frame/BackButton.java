@@ -6,6 +6,10 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 
+/**
+ * - Class that represents the back buttons that are displayed in the 
+ *   various component menus
+ */
 public class BackButton extends JButton {
 
 	/**

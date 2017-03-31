@@ -10,9 +10,13 @@ import ComponentCommand.ComponentManager;
 import ComponentCommand.ComponentReceiver;
 import FloorComponent.*;
 
+/**
+ * - Class that extends JLayeredPane and creates the grid and glassPanel where the floor 
+ *   components of each floor will be stored when dragged onto the grid.
+ */
 public class MainLayeredPane extends JLayeredPane {
 
-    /**
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;

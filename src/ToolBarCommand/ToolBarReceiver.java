@@ -14,8 +14,8 @@ import Frame.InnerPanel;
 import Frame.TabbedPane;
 
 /** 
- * Implements the code for the new, save and load commands 
- * from the toolbar.
+ * - Implements the code for the new, save and load commands 
+ *   from the toolbar.
  */
 public class ToolBarReceiver {
 	
@@ -34,17 +34,19 @@ public class ToolBarReceiver {
 	
 	private PrintWriter out;
 	
-	//Change this to preset the preferred directory 
+	//Change this to preset the preferred directory for saving and loading when running in eclispe
 	private String applicationDirectory = "C:/Users/Nick/workspace/twoBuilder/FloorPlans";
 	
 	private int returnFile;
 	
 	private InnerPanel innerPanel;
 	
+	//Deletes the current floor plan and creates a new one
 	public void newPlan(TabbedPane currentMainPane){
 		currentMainPane.removeAll();
 	}
 	
+	//Saves the current floor plan to the user named text file
 	public void savePlan(){
 		innerPanel = InnerPanel.getInstance();
 		
@@ -72,6 +74,7 @@ public class ToolBarReceiver {
 		
 	}
 	
+	//Loads the user selected text file into the application and calls stringToFloorComponents()
 	public void loadPlan(){
 		innerPanel = InnerPanel.getInstance();
 		
@@ -108,6 +111,7 @@ public class ToolBarReceiver {
 		System.out.println(innerPanel.getLoadedComponents());
 	}
 	
+	//Removes the current floor of the floor plan 
 	public void removeCurrentFloor(TabbedPane currentMainPane){
 		currentMainPane.removeCurrentFloor();
 	}

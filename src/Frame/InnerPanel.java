@@ -8,7 +8,11 @@ import ComponentCommand.ComponentReceiver;
 
 import java.awt.*;
 
-
+/**
+ * - Singleton class that creates the instances for TabbedPane, MenuPane and MainLayeredPane.
+ * - The global access of this class is used to store various variables as well as
+ *   allow the drag feature to function correctly.
+ */
 public class InnerPanel {
 	
 	private JPanel leftMenuHeaderPanel;

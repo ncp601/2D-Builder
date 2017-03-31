@@ -5,14 +5,13 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Manages the various commands from the toolbar  
+ * - Manages the various commands from the toolbar  
  */
 public class ToolBarManager {
 
 	private List<ToolBarCommands> commandList = Collections.emptyList();
 
 	private int index = 0;
-	
 	
 	public void doCurrentCommand(ToolBarCommands command) {
 		List<ToolBarCommands> newToolBarCommandList = new ArrayList<ToolBarCommands>(index + 1);

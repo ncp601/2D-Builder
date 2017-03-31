@@ -2,6 +2,9 @@ package ComponentCommand;
 
 import java.util.*;
 
+/*
+ * - Manages the commands for each floor component
+ */
 public class ComponentManager {
 
 	private List<ComponentCommands> commandList = Collections.emptyList();

@@ -1,7 +1,7 @@
 package Frame;
 
 /**
- * Main method of the application
+ * - Main method of the application
  */
 public class BuilderApplication {
 	

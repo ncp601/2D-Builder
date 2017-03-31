@@ -3,10 +3,14 @@ package Frame;
 import java.awt.*;
 import javax.swing.*;
 
+/**
+ * - Class that creates the underlying grid seen in the MainLayeredPane 
+ *   of each floor
+ */
 public class Grid extends JPanel{
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	

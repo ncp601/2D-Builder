@@ -10,9 +10,9 @@ import Factories.FloorComponentFactoryProducer;
 import FloorComponent.FloorComponent;
 
 /**
- * Class that creates everything in the left menu panel 
- * as well as implements each action listener for the various
- * buttons.
+ * - Class that creates everything in the left menu panel 
+ *   as well as implements each action listener for the various
+ *   buttons.
  */
 public class MenuPane extends JPanel{
 	
@@ -402,6 +402,10 @@ public class MenuPane extends JPanel{
         stairsMenuPanel.add(stairsFactory.getComponent("STAIRSSU"));
         stairsMenuPanel.add(stairsFactory.getComponent("STAIRSSR"));
         stairsMenuPanel.add(stairsFactory.getComponent("STAIRSSL"));
+        stairsMenuPanel.add(stairsFactory.getComponent("STAIRTSD"));
+        stairsMenuPanel.add(stairsFactory.getComponent("STAIRTSU"));
+        stairsMenuPanel.add(stairsFactory.getComponent("STAIRTSR"));
+        stairsMenuPanel.add(stairsFactory.getComponent("STAIRTSL"));
         
         add(stairsMenuPanel, "STAIRS");
 

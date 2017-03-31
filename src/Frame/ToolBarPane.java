@@ -8,8 +8,8 @@ import ComponentCommand.*;
 import ToolBarCommand.*;
 
 /**
- * Class that creates everything in the toolbar panel and 
- * implements the actions for the buttons.
+ * - Class that creates everything in the toolbar panel and 
+ *   implements the actions for the buttons.
  */
 public class ToolBarPane {
 	
@@ -196,6 +196,8 @@ public class ToolBarPane {
 		return toolbarPanel;
 	}
 	
+	
+	//Action listeners for the toolbar
     private void saveFloorPlanButtonActionPerformed(ActionEvent evt) {                                                    
     	innerPanel = InnerPanel.getInstance();
     	currentTabbedPane = innerPanel.getTabbedPane();
