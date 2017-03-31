@@ -1,27 +1,25 @@
 package FloorComponent;
 
 import javax.swing.*;
-
 import ComponentCommand.ComponentMover;
-
 import java.awt.*;
 
-public class DoorComponentFacingRightOpenLeft extends FloorComponent{
+public class BathtubComponentVertical extends FloorComponent{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	final private String componentType = "DOORFROL";
-	
+	final private String componentType = "BATHTUBV";
+
 	private Dimension size = new Dimension(110, 110);
-	private Dimension gridSize = new Dimension(66, 66);
+	private Dimension gridSize = new Dimension(36, 102);
 	
 	private boolean inMenu;
 	private ComponentMover compMove = new ComponentMover();
 	
-	public DoorComponentFacingRightOpenLeft(boolean m){
+	public BathtubComponentVertical(boolean m){
 		this.inMenu = m;
         addMouseListener(compMove);
         addMouseMotionListener(compMove);
@@ -31,9 +29,9 @@ public class DoorComponentFacingRightOpenLeft extends FloorComponent{
 	
 	@Override
 	public void createComponent(){
-		
+
 		if(inMenu){
-			ImageIcon image = new ImageIcon("images/doorFacingRightOpenLeft.png");
+			ImageIcon image = new ImageIcon("images/bathtubVertical.png");
 			setIcon(image);
 			setMaximumSize(size);
 			setMinimumSize(size);
@@ -41,7 +39,7 @@ public class DoorComponentFacingRightOpenLeft extends FloorComponent{
 		}
 		
 		if(!inMenu){
-			ImageIcon image = new ImageIcon("images/resizedDoorFacingRightOpenLeft.png");
+			ImageIcon image = new ImageIcon("images/resizedBathtubVertical.png");
 			setIcon(image);
 			setMaximumSize(gridSize);
 			setMinimumSize(gridSize);
@@ -65,3 +63,5 @@ public class DoorComponentFacingRightOpenLeft extends FloorComponent{
 	}
 
 }
+
+
