@@ -2,7 +2,7 @@
 
 An application that allows the user to design a floor plan by dragging and dropping components onto the floor grid.
 
-### Prerequisites
+########## Prerequisites
 
 - Eclipse Neon 
 
